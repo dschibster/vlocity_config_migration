@@ -1,0 +1,179 @@
+{
+  "objects": [
+    {
+      "query": "SELECT creatable_true, updateable_true FROM vlocity_cmt__AttributeCategory__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT creatable_true, updateable_true FROM vlocity_cmt__ChargeMeasurement__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT  creatable_true, updateable_true FROM vlocity_cmt__Attribute__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT  creatable_true, updateable_true FROM vlocity_cmt__Picklist__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT  creatable_true, updateable_true FROM Product2",
+      "operation": "Upsert",
+      "externalId": "ProductCode",
+      "excludedFields": ["ExternalDataSourceId", "ExternalDataSource.Name"]
+    },
+    {
+      "query": "SELECT vlocity_cmt__PicklistId__c, creatable_true, updateable_true FROM vlocity_cmt__PicklistValue__c",
+      "operation": "Upsert",
+      "externalId": "Name",
+      "master": false
+    },
+    {
+      "query": "SELECT  creatable_true, updateable_true FROM vlocity_cmt__AttributeAssignment__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT  creatable_true, updateable_true FROM vlocity_cmt__PricingVariable__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT  creatable_true, updateable_true FROM vlocity_cmt__PricingElement__c WHERE vlocity_cmt__CurrencyCode__c != 'USD'",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT creatable_true, updateable_true FROM vlocity_cmt__TimePlan__c ",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT creatable_true, updateable_true FROM vlocity_cmt__TimePolicy__c ",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT  creatable_true, updateable_true FROM vlocity_cmt__Promotion__c ",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT vlocity_cmt__PromotionId__c,creatable_true, updateable_true FROM vlocity_cmt__PromotionItem__c ",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT  creatable_true, updateable_true FROM vlocity_cmt__PricingPlan__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT vlocity_cmt__PricingPlanId__c, vlocity_cmt__PricingPlanId__r.Name, creatable_true, updateable_true FROM vlocity_cmt__PricingPlanStep__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT  creatable_true, updateable_true FROM vlocity_cmt__PriceList__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT vlocity_cmt__PriceListId__c, vlocity_cmt__PriceListId__r.Name,  creatable_true, updateable_true FROM vlocity_cmt__PriceListEntry__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT RecordTypeId, ObjectClassId__c, creatable_true, updateable_true FROM vlocity_cmt__ObjectClass__c",
+      "operation": "Upsert",
+      "externalId": "Name",
+      "useFieldMapping": true,
+      "fieldMapping": [
+        {
+          "sourceField": "ObjectClassId__c",
+          "targetField": "OldId__c"
+        }
+      ]
+    },
+    {
+      "query": "SELECT vlocity_cmt__ObjectClassId__c, vlocity_cmt__SubclassId__c,creatable_true, updateable_true FROM vlocity_cmt__ObjectLayout__c ",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT creatable_true, updateable_true FROM vlocity_cmt__UIFacet__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT RecordTypeId,vlocity_cmt__FacetId__c ,vlocity_cmt__ObjectLayoutId__c, creatable_true, updateable_true FROM vlocity_cmt__ObjectFacet__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT  creatable_true, updateable_true FROM vlocity_cmt__UISection__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT vlocity_cmt__ObjectFacetId__c creatable_true, updateable_true FROM vlocity_cmt__ObjectSection__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT vlocity_cmt__ObjectSectionId__c, creatable_true, updateable_true FROM vlocity_cmt__ObjectElement__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT vlocity_cmt__ObjectClassId__c, vlocity_cmt__ObjectSectionId__c, creatable_true, updateable_true FROM vlocity_cmt__ObjectFieldAttribute__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT Id, Name FROM vlocity_cmt__Attribute__c",
+      "operation": "Readonly",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT  creatable_true, updateable_true FROM vlocity_cmt__ProductChildItem__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT  creatable_true, updateable_true FROM vlocity_cmt__CalculationMatrix__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT vlocity_cmt__CalculationMatrixId__c,  creatable_true, updateable_true FROM vlocity_cmt__CalculationMatrixVersion__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT  creatable_true, updateable_true FROM vlocity_cmt__CalculationProcedure__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT vlocity_cmt__CalculationProcedureId__c creatable_true, updateable_true FROM vlocity_cmt__CalculationProcedureVersion__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT  vlocity_cmt__CalculationProcedureVersionId__c, creatable_true, updateable_true FROM vlocity_cmt__CalculationProcedureVariable__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT vlocity_cmt__CalculationProcedureVersionId__c, creatable_true, updateable_true FROM vlocity_cmt__CalculationProcedureStep__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    }
+  ]
+}
+
